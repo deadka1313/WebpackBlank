@@ -1,0 +1,8 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/deadka1313/portfolio.git",
+  "author": "deadka1313 <deadka1313@gmail.com>",
+  "license": "MIT"
+}
