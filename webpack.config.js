@@ -7,6 +7,8 @@ const devserver = require('./webpack/devserver');
 const stylus = require('./webpack/stylus');
 const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
+const uglifyJS = require('./webpack/js.uglify');
+const images = require('./webpack/images');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -39,14 +41,16 @@ const common = merge([
       })
     ],
   },
-    pug()
+    pug(),
+    images()
 ]);
 
 module.exports = function(env) {
   if (env ===  'prodaction') {
     return merge([
       common,
-      extractCSS()
+      extractCSS(),
+      uglifyJS()
     ])
   }
   if (env === 'development'){

@@ -447,9 +447,11 @@ template {
 }
 ul {
   border: 1px solid #777;
+  background: url(../images/call-answer.svg);
+  background-size: 200px;
 }
 ul li {
   display: inline-block;
-  padding: 5px 10px;
   background: #bbb;
+  height: 200px;
 }
